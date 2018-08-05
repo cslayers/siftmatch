@@ -13,34 +13,6 @@ void test_aysift()
 }
 
 
-void print_some_pairs(vector<Point2f> ref_coor, vector<Point2f> tar_coor, int num = 10)
-{
-	cout << "head" << endl;
-	cout << "---------------------------------------------------------------" << endl;
-	for (int i = 0; i < num; i++)
-	{
-		if (i < ref_coor.size())
-		{
-			cout << ref_coor[i] << " <-> " << tar_coor[i] << endl;
-		}
-	}
-	cout << endl;
-
-	cout << "tail" << endl;
-	cout << "---------------------------------------------------------------" << endl;
-	for (int i = ref_coor.size()-num; i < ref_coor.size(); i++)
-	{
-		if (i >= 0 &&  i < ref_coor.size())
-		{
-			cout << ref_coor[i] << " <-> " << tar_coor[i] << endl;
-		}
-	}
-
-
-	cout << endl;
-	cout << "---------------------------------------------------------------" << endl<<endl;
-
-}
 
 void test_get_corr()
 {
@@ -64,17 +36,34 @@ void test_get_corr()
 	cout << "[+]Left " << ref_coor_final.size() << " correspondences after filtering. " << endl;
 
 
-
-	float*affine = nullptr;
+	//test ransac function below
 	MatrixXd aff;
 	vector<Point2f> ref_coor_kernel;
 	vector<Point2f> tar_coor_kernel;
-	ransac(ref_coor_final, tar_coor_final, ref_coor_kernel, tar_coor_kernel,affine,aff);
+	ransac(ref_coor_final, tar_coor_final, ref_coor_kernel, tar_coor_kernel,aff);
 	cout << "[+]Left " << ref_coor_kernel.size() << " correspondences after global ransac. " << endl;
 	cout << aff << endl;
 
-	if(affine)
-		free(affine);
+
+
 	aywait();
 
+}
+
+
+void test_run()
+{
+	Run_config config;
+	config.gradient_order = 4;
+	config.margin = 10;
+	config.gridspace = 5;
+	config.NEIGH_NUM = 12;
+	config.subset_radius = 16;
+
+	string imageref = "./testdata/sin/Sample3Reference.tif";
+	string imagetar = "./testdata/sin/sinref.tif";
+
+	run(config,imageref,imagetar);
+
+	aywait();
 }

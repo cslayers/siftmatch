@@ -1,7 +1,8 @@
 #include"aysift.h"
+#include"util.h"
+
 #include<omp.h>
 #include<iomanip>
-
 
 void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc, int numfeatures,float contr,float edge,float sigma)
 {
@@ -139,7 +140,7 @@ void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, vector<Point2f>&
 {
 	double time_start = omp_get_wtime();
 
-	int num = coor_ref.size();
+	int num =(int) coor_ref.size();
 //#pragma omp parallel for
 	for (int i = 0; i < num; i++)
 	{
@@ -218,8 +219,8 @@ float error_square(Point2f&ref, Point2f&tar, MatrixXd& affine)
 	float result = 0.0f;
 
 	Point2f tar_r(0, 0);
-	tar_r.x = ref.x*affine(0, 0) + ref.y*affine(1, 0) + affine(2, 0);
-	tar_r.y = ref.x*affine(0, 1) + ref.y*affine(1, 1) + affine(2, 1);
+	tar_r.x = (float)(ref.x*affine(0, 0) + ref.y*affine(1, 0) + affine(2, 0));
+	tar_r.y = (float)(ref.x*affine(0, 1) + ref.y*affine(1, 1) + affine(2, 1));
 
 	result += (tar.x - tar_r.x)*(tar.x - tar_r.x);
 	result += (tar.y - tar_r.y)*(ref.y - tar_r.y);
@@ -239,10 +240,9 @@ int consensus(MatrixXd& affine, vector<Point2f>&coor_ref, vector<Point2f>& coor_
 	return 0;
 }
 
-int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&coor_ref_final, vector<Point2f>& coor_tar_final, float* affine, MatrixXd& result)
+int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&coor_ref_final, vector<Point2f>& coor_tar_final, MatrixXd& result)
 {
 
-	affine = (float*)malloc(sizeof(float) * 6);
 
 	vector<int> randon_indices;
 	for (int i = 0; i < coor_ref.size(); i++)
@@ -289,7 +289,7 @@ int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&
 
 
 
-	int consensu_size = agreeIndices.size();
+	int consensu_size = (int)agreeIndices.size();
 	//cout << consensu_size << endl;
 	MatrixXd A(consensu_size, 3);
 	MatrixXd B(consensu_size, 2);
@@ -306,7 +306,132 @@ int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&
 	MatrixXd final_affine(3, 2);
 	final_affine = A.colPivHouseholderQr().solve(B);
 	result = final_affine;
-	for (int i = 0; i < 6; i++)
-		affine[i] = final_affine(i / 2, i % 2);
+	return 0;
+}
+
+int run(Run_config config,string imageref,string imagetar)
+{
+	vector<Point2f> coor_ref_init;
+	vector<Point2f> coor_tar_init;
+	get_crspd(imageref, imagetar, coor_ref_init, coor_tar_init);
+
+	vector<Point2f> coor_ref;
+	vector<Point2f> coor_tar;
+	filter(coor_ref_init, coor_tar_init, coor_ref, coor_tar);
+
+	//build tree for ref
+	Mat source = Mat(coor_ref).reshape(1);
+	source.convertTo(source, CV_32F);
+	flann::KDTreeIndexParams indexParam(2);
+	flann::Index kdtree(source, indexParam);
+
+	//set configuration
+	int gridspacex = config.gridspace;
+	int gridspacey = config.gridspace;
+	int marginx = config.margin;
+	int marginy = config.margin;
+	int gradientOrder = config.gradient_order;
+	int subset_radiusx = config.subset_radius;
+	int subset_radiusy = config.subset_radius;
+
+	//read some information about ref
+	Mat ref = imread(imageref);
+	int width = ref.cols;
+	int height = ref.rows;
+
+	//calculate poi matrix
+	int subsetx = subset_radiusx * 2 + 1;
+	int subsety = subset_radiusy * 2 + 1;
+	int roiWidth = width - 2 * gradientOrder;
+	int roiHeight = height - 2 * gradientOrder;
+	int numberx = (roiWidth - 2 * subset_radiusx - 2 * marginx) / gridspacex + 1;
+	int numbery = (roiHeight - 2 * subset_radiusy - 2 * marginy) / gridspacey + 1;
+	int totalnumber = numberx*numbery;
+
+	// build query,please refer to the flann API by opencv
+	vector<float> query;
+	for (int i = 0; i < totalnumber; i++)
+	{
+		int xx = i % numberx;
+		int yy = i / numberx;
+		int x = gradientOrder + marginx + subset_radiusx + xx*gridspacex;
+		int y = gradientOrder + marginy + subset_radiusy + yy*gridspacey;
+		query.push_back((float)x);
+		query.push_back((float)y);
+	}
+	Mat querys(query);
+	querys = querys.reshape(1, totalnumber);
+
+	//print_matrix(querys);
+
+	//query all poi's nearest neighbours for once
+	int NEIGH_NUM = 12;
+	Mat indices(totalnumber, NEIGH_NUM, CV_8SC1);
+	Mat dists(totalnumber, NEIGH_NUM, CV_32FC1);
+	kdtree.knnSearch(querys, indices, dists, NEIGH_NUM);
+
+	for (int i = 0; i < totalnumber; i++)
+	{
+
+		Point2f poi(query[2 * i], query[2 * i + 1]);
+
+
+		vector<Point2f> icoor1;//hold nearest coors
+		vector<Point2f> icoor2;
+		for (int j = 0; j < NEIGH_NUM; j++)
+		{
+			int globalidx = indices.at<int>(i, j);
+			Point2f tmp = coor_ref[globalidx];
+			Point2f tmp2 = coor_tar[globalidx];
+#ifdef AY_USE_LOCAL_COOR
+			tmp -= poi;
+			tmp2 -= poi;
+#endif 
+			icoor1.push_back(tmp);
+			icoor2.push_back(tmp2);
+
+			//cout << tmp << ' ' << tmp2 << endl;
+		}
+
+
+		vector<Point2f> icoor1_f;
+		vector<Point2f> icoor2_f;
+		MatrixXd affine;
+		ransac(icoor1, icoor2, icoor1_f, icoor2_f, affine);
+
+
+#ifdef AY_USE_LOCAL_COOR
+		float sift_dx = (float)affine(2, 0);
+		float sift_dy = (float)affine(2, 1);
+#else
+		MatrixXd ref_(1, 3);
+		ref_(0, 0) = poi.x;
+		ref_(0, 1) = poi.y;
+		ref_(0, 2) = 1;
+		MatrixXd tar = ref_*affine;
+		MatrixXd ref(1, 2);
+		ref(0, 0) = ref_(0, 0);
+		ref(0, 1) = ref_(0, 1);
+		MatrixXd _guess = tar - ref;
+
+		float sift_dx = (float)_guess(0, 0);
+		float sift_dy = (float)_guess(0, 1);
+#endif // AY_USE_LOCAL_COOR
+
+
+		Point2f guess(sift_dx,sift_dy);
+		
+		if (0)
+		{
+			cout << poi << ": result:" << guess << "\t";
+			cout << (icoor1.size() - icoor1_f.size()) << " points out";
+			cout << endl;
+		}
+		else
+		{
+			cout << sift_dx << " ";
+		}
+	}
+
 	return 0;
 }

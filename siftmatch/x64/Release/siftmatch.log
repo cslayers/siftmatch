@@ -1,14 +1,6 @@
-﻿  aysift.cpp
-aysift.cpp(142): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-aysift.cpp(221): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-aysift.cpp(222): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-aysift.cpp(292): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-aysift.cpp(310): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-  main.cpp
-c:\users\cslay\desktop\github\siftmatch\siftmatch\test_aysift.h(31): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-  正在生成代码
-  234 of 5656 functions ( 4.1%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    69 functions had inline decision re-evaluated but remain unchanged
+﻿  正在生成代码
+  252 of 5941 functions ( 4.2%) were compiled, the rest were copied from previous compilation.
+    2 functions were new in current compilation
+    33 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   siftmatch.vcxproj -> C:\Users\cslay\Desktop\github\siftmatch\x64\Release\siftmatch.exe

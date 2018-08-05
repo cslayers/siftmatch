@@ -18,11 +18,21 @@ using namespace Eigen;
 #define DESC_LENGTH (128)
 #define MATCH_THRE_SQUARE (0.36f)
 #define RANSAC_ITER_NUM (50)
-#define RANSAC_ERROR_THRES (1f)
+#define RANSAC_ERROR_THRES (1.f)
 
 
 
 #define AY_VERBOSE 1
+#define AY_USE_LOCAL_COO
+
+typedef struct
+{
+	int NEIGH_NUM;
+	int gridspace;
+	int gradient_order;
+	int margin;
+	int subset_radius;
+}Run_config;
 
 void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc,
 	int numfeatures=0,
@@ -44,7 +54,7 @@ void read_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path)
 void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, 
 	vector<Point2f>&coor_ref_filtered, vector<Point2f>&coor_tar_filtered);
 
+int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&coor_ref_final, vector<Point2f>& coor_tar_final, MatrixXd& result);
 
+int run(Run_config config,string ref,string tar);
 
-
-int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&coor_ref_final, vector<Point2f>& coor_tar_final, float* affine, MatrixXd& result);

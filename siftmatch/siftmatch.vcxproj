@@ -119,6 +119,7 @@
   <ItemGroup>
     <ClCompile Include="aysift.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aysift.h" />
