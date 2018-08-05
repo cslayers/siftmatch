@@ -97,6 +97,8 @@ int nn_match_single(Mat & desc_ref, Mat & desc_tar, vector<KeyPoint>& kp_ref, ve
 
 void get_crspd(string path_ref, string path_tar, vector<Point2f>& coor_ref, vector<Point2f>& coor_tar)
 {
+	double time_start = omp_get_wtime();
+
 	Mat desc_ref;
 	vector<KeyPoint> kps_ref;
 	get_sift(path_ref, kps_ref, desc_ref);
@@ -112,10 +114,11 @@ void get_crspd(string path_ref, string path_tar, vector<Point2f>& coor_ref, vect
 	if (AY_VERBOSE)
 		cout << "Matching features...";
 
-
+	double time_match_start = omp_get_wtime();
 	nn_match_single(desc_ref, desc_tar, kps_ref, kps_tar, coor_ref, coor_tar);
 
 
+	double time_end = omp_get_wtime();
 
 	if (AY_VERBOSE)
 	{
@@ -124,6 +127,10 @@ void get_crspd(string path_ref, string path_tar, vector<Point2f>& coor_ref, vect
 		cout << "tar kp num: " << kps_tar.size() << endl;
 		cout << "match sucess: " << coor_ref.size() << " ";
 		cout << "match rate: " << coor_ref.size() / (kps_ref.size() + 0.0001f) << endl;
+
+		cout << "time for match: " << time_end - time_match_start << "s" << endl;
+		cout << "total time for get_coor: " << time_end - time_start << "s" << endl;
+
 	}
 
 }
