@@ -147,7 +147,8 @@ void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, vector<Point2f>&
 		//special
 		int  spe = 1;
 
-		for (int j = 0; j < i; j++)
+		for (int j = i - 1; j >= 0; j--)			
+		//for (int j = 0; j < i; j++)
 		{
 			if (
 				(coor_ref[i].x == coor_ref[j].x) &&
