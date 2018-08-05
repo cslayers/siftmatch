@@ -210,3 +210,103 @@ void read_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path)
 }
 
 
+
+
+
+float error_square(Point2f&ref, Point2f&tar, MatrixXd& affine)
+{
+	float result = 0.0f;
+
+	Point2f tar_r(0, 0);
+	tar_r.x = ref.x*affine(0, 0) + ref.y*affine(1, 0) + affine(2, 0);
+	tar_r.y = ref.x*affine(0, 1) + ref.y*affine(1, 1) + affine(2, 1);
+
+	result += (tar.x - tar_r.x)*(tar.x - tar_r.x);
+	result += (tar.y - tar_r.y)*(ref.y - tar_r.y);
+
+	return result;
+}
+
+int consensus(MatrixXd& affine, vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<int>&agreeIndices)
+{
+	for (int i = 0; i < coor_ref.size(); i++)
+	{
+		if (error_square(coor_ref[i], coor_tar[i], affine)<RANSAC_ERROR_THRES*RANSAC_ERROR_THRES)
+		{
+			agreeIndices.push_back(i);
+		}
+	}
+	return 0;
+}
+
+int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&coor_ref_final, vector<Point2f>& coor_tar_final, float* affine, MatrixXd& result)
+{
+
+	affine = (float*)malloc(sizeof(float) * 6);
+
+	vector<int> randon_indices;
+	for (int i = 0; i < coor_ref.size(); i++)
+		randon_indices.push_back(i);
+
+	vector<int> agreeIndices;
+	MatrixXd bestAffine(3, 3);
+	for (int i = 0; i < RANSAC_ITER_NUM; i++)
+	{
+		for (int c = 0; c < 3; c++)
+		{
+			int t = rand() % coor_ref.size();
+			int tv = randon_indices[c];
+			randon_indices[c] = randon_indices[t];
+			randon_indices[t] = randon_indices[tv];
+		}
+
+		Matrix3d cur_A;
+		MatrixXd cur_B(3, 2);
+		MatrixXd cur_X(3, 2);
+		for (int i = 0; i < 3; i++)
+		{
+			cur_A(i, 0) = coor_ref[randon_indices[i]].x;
+			cur_A(i, 1) = coor_ref[randon_indices[i]].y;
+			cur_A(i, 2) = 1;
+
+			cur_B(i, 0) = coor_tar[randon_indices[i]].x;
+			cur_B(i, 1) = coor_tar[randon_indices[i]].y;
+		}
+
+		cur_X = cur_A.colPivHouseholderQr().solve(cur_B);
+
+		vector<int> tempIndices;
+		consensus(cur_X, coor_ref, coor_tar, tempIndices);
+
+		if (tempIndices.size() > agreeIndices.size())
+		{
+			agreeIndices.assign(tempIndices.begin(), tempIndices.end());
+			bestAffine = cur_X;
+		}
+
+
+	}
+
+
+
+	int consensu_size = agreeIndices.size();
+	//cout << consensu_size << endl;
+	MatrixXd A(consensu_size, 3);
+	MatrixXd B(consensu_size, 2);
+	for (int i = 0; i < consensu_size; i++)
+	{
+		A(i, 0) = coor_ref[agreeIndices[i]].x;
+		A(i, 1) = coor_ref[agreeIndices[i]].y;
+		A(i, 2) = 1;
+		B(i, 0) = coor_tar[agreeIndices[i]].x;
+		B(i, 1) = coor_tar[agreeIndices[i]].y;
+		coor_ref_final.push_back(coor_ref[agreeIndices[i]]);
+		coor_tar_final.push_back(coor_tar[agreeIndices[i]]);
+	}
+	MatrixXd final_affine(3, 2);
+	final_affine = A.colPivHouseholderQr().solve(B);
+	result = final_affine;
+	for (int i = 0; i < 6; i++)
+		affine[i] = final_affine(i / 2, i % 2);
+	return 0;
+}

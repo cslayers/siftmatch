@@ -12,11 +12,13 @@ using namespace cv;
 #include<fstream>
 using namespace std;
 
+#include<Eigen\dense>
+using namespace Eigen;
 
 #define DESC_LENGTH (128)
 #define MATCH_THRE_SQUARE (0.36f)
 #define RANSAC_ITER_NUM (50)
-#define RANSAC_ERROR_THRES (1.f)
+#define RANSAC_ERROR_THRES (1f)
 
 
 
@@ -43,3 +45,6 @@ void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar,
 	vector<Point2f>&coor_ref_filtered, vector<Point2f>&coor_tar_filtered);
 
 
+
+
+int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&coor_ref_final, vector<Point2f>& coor_tar_final, float* affine, MatrixXd& result);

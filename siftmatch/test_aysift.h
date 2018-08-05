@@ -64,6 +64,17 @@ void test_get_corr()
 	cout << "[+]Left " << ref_coor_final.size() << " correspondences after filtering. " << endl;
 
 
+
+	float*affine = nullptr;
+	MatrixXd aff;
+	vector<Point2f> ref_coor_kernel;
+	vector<Point2f> tar_coor_kernel;
+	ransac(ref_coor_final, tar_coor_final, ref_coor_kernel, tar_coor_kernel,affine,aff);
+	cout << "[+]Left " << ref_coor_kernel.size() << " correspondences after global ransac. " << endl;
+	cout << aff << endl;
+
+	if(affine)
+		free(affine);
 	aywait();
 
 }
