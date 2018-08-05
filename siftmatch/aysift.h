@@ -34,3 +34,12 @@ To get corresponding locations of two image by using sift and force match
 */
 void get_crspd(string path_ref, string path_tar, vector<Point2f>&coor_ref, vector<Point2f>&coor_tar);
 int nn_match_single(Mat & desc_ref, Mat & desc_tar, vector<KeyPoint>& kp_ref, vector<KeyPoint>& kp_tar, vector<Point2f>& coor_ref, vector<Point2f>& coor_tar);
+
+void write_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path);
+
+void read_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path);
+
+void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, 
+	vector<Point2f>&coor_ref_filtered, vector<Point2f>&coor_tar_filtered);
+
+

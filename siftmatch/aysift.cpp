@@ -1,6 +1,6 @@
 #include"aysift.h"
 #include<omp.h>
-
+#include<iomanip>
 
 
 void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc, int numfeatures,float contr,float edge,float sigma)
@@ -30,10 +30,10 @@ void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc, int numfeatures,f
 		cout << filename << " ";
 		cout << "[features num:" << kps.size() << "]";
 		cout << " [preparetime: " << time_start - time_init << "s]";
-		cout << " [sifttime: " << time_gen_end - time_start << "s]";
 		cout << " [detect: " << time_detect_end - time_start << "s]";
 		cout << " [gen: " << time_gen_end - time_detect_end<<"s]";
 		cout << endl;
+		cout << "[t]sift time: " << time_gen_end - time_start << "s" << endl;
 	}
 }
 
@@ -128,9 +128,84 @@ void get_crspd(string path_ref, string path_tar, vector<Point2f>& coor_ref, vect
 		cout << "match sucess: " << coor_ref.size() << " ";
 		cout << "match rate: " << coor_ref.size() / (kps_ref.size() + 0.0001f) << endl;
 
-		cout << "time for match: " << time_end - time_match_start << "s" << endl;
-		cout << "total time for get_coor: " << time_end - time_start << "s" << endl;
+		cout << "[t]time for match: " << time_end - time_match_start << "s" << endl;
+		cout << "[t]total time for get_coor: " << time_end - time_start << "s" << endl;
 
 	}
 
 }
+
+void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, vector<Point2f>&coor_ref_filter, vector<Point2f>&coor_tar_filter)
+{
+	double time_start = omp_get_wtime();
+
+	int num = coor_ref.size();
+//#pragma omp parallel for
+	for (int i = 0; i < num; i++)
+	{
+
+		//special
+		int  spe = 1;
+
+		for (int j = 0; j < i; j++)
+		{
+			if (
+				(coor_ref[i].x == coor_ref[j].x) &&
+				(coor_ref[i].y == coor_ref[j].y)
+				)
+			{
+				spe = -1;
+				break;
+			}
+		}
+
+		#pragma omp critical
+		if (spe>0)
+		{
+			coor_ref_filter.push_back(coor_ref[i]);
+			coor_tar_filter.push_back(coor_tar[i]);
+		}
+	}//for end
+
+	double time_end = omp_get_wtime();
+	cout << "[t]location filter time: " << time_end - time_start << "s " << endl;
+}//function end
+
+
+
+
+
+void write_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path)
+{
+	ofstream out;
+	out.open(path);
+
+	for (int i = 0; i < coor_ref.size(); i++)
+	{
+		out << fixed << setprecision(6);
+		out << coor_ref[i].x << " " << coor_ref[i].y << " ";
+		out << coor_tar[i].x << " " << coor_tar[i].y << " ";
+		out << endl;
+	}
+	out.close();
+}
+
+void read_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path)
+{
+	ifstream in;
+	in.open(path);
+	float tmp = 0.0;
+	float tmp1 = 0.0;
+	while (in >> tmp)
+	{
+		in >> tmp1;
+		coor_ref.push_back(Point2f(tmp, tmp1));
+
+		in >> tmp;
+		in >> tmp1;
+		coor_tar.push_back(Point2f(tmp, tmp1));
+	}
+	in.close();
+}
+
+

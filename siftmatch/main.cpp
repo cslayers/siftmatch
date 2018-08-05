@@ -6,9 +6,9 @@ using namespace std;
 
 int main()
 {
-	test_aysift();
 
 	test_get_corr();
+
 
 	return 0;
 }
