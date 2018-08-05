@@ -1,10 +1,11 @@
 #include<iostream>
 using namespace std;
 
+
+#include "test_aysift.h"
+
 int main()
 {
-	cout << "Hello World! " << endl;
-	cout << "Who are you?" << endl;
-	getchar();
+	test_aysift();
 	return 0;
 }
