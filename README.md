@@ -1,4 +1,7 @@
 # siftmatch
 Some code using SIFT OPENCV, with time info.
 
-dependency: OpenCV;Eigen
+# dependency 
+  OpenCV(version 2.4.13 is recommended)
+
+  Eigen
