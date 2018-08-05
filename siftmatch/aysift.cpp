@@ -4,14 +4,19 @@
 #include<omp.h>
 #include<iomanip>
 
-void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc, int numfeatures,float contr,float edge,float sigma)
+void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc, 
+	Aysift_config con)
 {
 	double time_init = omp_get_wtime();
 
 	Mat gray=imread(filename,1);
 	kps.resize(100000);
 	
-	SIFT sift(numfeatures, 3, contr, edge, sigma);
+	SIFT sift(con.max_feature_num, 
+		con.kp_layer, 
+		con.contour, 
+		con.edge_limit, 
+		con.sigma);
 	
 
 	//SIFT start
@@ -96,18 +101,18 @@ int nn_match_single(Mat & desc_ref, Mat & desc_tar, vector<KeyPoint>& kp_ref, ve
 	return 0;
 }
 
-void get_crspd(string path_ref, string path_tar, vector<Point2f>& coor_ref, vector<Point2f>& coor_tar)
+void get_crspd(string path_ref, string path_tar, vector<Point2f>& coor_ref, vector<Point2f>& coor_tar,Aysift_config con)
 {
 	double time_start = omp_get_wtime();
 
 	Mat desc_ref;
 	vector<KeyPoint> kps_ref;
-	get_sift(path_ref, kps_ref, desc_ref);
+	get_sift(path_ref, kps_ref, desc_ref,con);
 
 
 	Mat desc_tar;
 	vector<KeyPoint> kps_tar;
-	get_sift(path_tar, kps_tar, desc_tar);
+	get_sift(path_tar, kps_tar, desc_tar,con);
 
 
 
@@ -309,11 +314,11 @@ int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&
 	return 0;
 }
 
-int run(Run_config config,string imageref,string imagetar)
+int run(Run_config config,string imageref,string imagetar, vector<Point2f>& result)
 {
 	vector<Point2f> coor_ref_init;
 	vector<Point2f> coor_tar_init;
-	get_crspd(imageref, imagetar, coor_ref_init, coor_tar_init);
+	get_crspd(imageref, imagetar, coor_ref_init, coor_tar_init,config.aysift_con);
 
 	vector<Point2f> coor_ref;
 	vector<Point2f> coor_tar;
@@ -419,17 +424,18 @@ int run(Run_config config,string imageref,string imagetar)
 #endif // AY_USE_LOCAL_COOR
 
 
-		Point2f guess(sift_dx,sift_dy);
-		
-		if (0)
+		Point2f guessi(sift_dx,sift_dy);
+		result.push_back(guessi);
+
+		if (1)
 		{
-			cout << poi << ": result:" << guess << "\t";
+			cout << poi << ": result:" << guessi << "\t";
 			cout << (icoor1.size() - icoor1_f.size()) << " points out";
 			cout << endl;
 		}
 		else
 		{
-			cout << sift_dx << " ";
+		//	cout << sift_dx << " ";
 		}
 	}
 

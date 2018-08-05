@@ -8,7 +8,7 @@ void aywait()
 }
 
 
-void print_some_pairs(vector<Point2f> ref_coor, vector<Point2f> tar_coor, int num)
+void print_some_pairs(vector<Point2f>& ref_coor, vector<Point2f>& tar_coor, int num)
 {
 	cout << "head" << endl;
 	cout << "---------------------------------------------------------------" << endl;

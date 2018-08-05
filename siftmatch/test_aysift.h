@@ -5,10 +5,11 @@
 
 void test_aysift()
 {
+	Aysift_config con;
 	string imagepath="./testdata/Sample1/trxy_s2_00.tif";
 	Mat desc;
 	vector<KeyPoint> kps;
-	get_sift(imagepath,kps,desc);
+	get_sift(imagepath,kps,desc,con);
 	aywait();
 }
 
@@ -22,7 +23,8 @@ void test_get_corr()
 
 	vector<Point2f> ref_coor;
 	vector<Point2f> tar_coor;
-	get_crspd(imageref, imagetar, ref_coor, tar_coor);
+	Aysift_config con;
+	get_crspd(imageref, imagetar, ref_coor, tar_coor,con);
 	//print_some_pairs(ref_coor,tar_coor);
 	cout << "[+]Found " << ref_coor.size() << " correspondences by SIFT and nearest matches. " << endl;
 
@@ -53,7 +55,15 @@ void test_get_corr()
 
 void test_run()
 {
+	Aysift_config aysift_con;
+	aysift_con.max_feature_num = 0;
+	aysift_con.edge_limit = 10.0f;
+	aysift_con.sigma = 1.6f;
+	aysift_con.contour = 0.04f;
+	aysift_con.kp_layer = 3;
+
 	Run_config config;
+	config.aysift_con = aysift_con;
 	config.gradient_order = 4;
 	config.margin = 10;
 	config.gridspace = 5;
@@ -63,7 +73,9 @@ void test_run()
 	string imageref = "./testdata/sin/Sample3Reference.tif";
 	string imagetar = "./testdata/sin/sinref.tif";
 
-	run(config,imageref,imagetar);
+	vector<Point2f> result;
+	run(config,imageref,imagetar,result);
+	cout << result.size() << endl;
 
 	aywait();
 }

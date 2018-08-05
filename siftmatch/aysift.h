@@ -27,25 +27,34 @@ using namespace Eigen;
 
 typedef struct
 {
+	int max_feature_num=0;
+	int kp_layer=3;
+	float contour=0.04f;
+	float edge_limit=10.0f;
+	float sigma=1.6f;
+}Aysift_config;//see opencv sift
+
+typedef struct
+{
+	Aysift_config aysift_con;
 	int NEIGH_NUM;
 	int gridspace;
 	int gradient_order;
 	int margin;
 	int subset_radius;
-}Run_config;
+}Run_config;//using square subset, same order,gridspace, and margin
 
 void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc,
-	int numfeatures=0,
-	float contour=0.04,
-	float edgeLimit=10.f,
-	float sigma=1.6f);
+	Aysift_config con);
 
 
 /*
 To get corresponding locations of two image by using sift and force match
 */
-void get_crspd(string path_ref, string path_tar, vector<Point2f>&coor_ref, vector<Point2f>&coor_tar);
-int nn_match_single(Mat & desc_ref, Mat & desc_tar, vector<KeyPoint>& kp_ref, vector<KeyPoint>& kp_tar, vector<Point2f>& coor_ref, vector<Point2f>& coor_tar);
+void get_crspd(string path_ref, string path_tar, vector<Point2f>&coor_ref, vector<Point2f>&coor_tar,Aysift_config con);
+
+int nn_match_single(Mat & desc_ref, Mat & desc_tar, vector<KeyPoint>& kp_ref, 
+	vector<KeyPoint>& kp_tar, vector<Point2f>& coor_ref, vector<Point2f>& coor_tar);
 
 void write_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path);
 
@@ -54,7 +63,8 @@ void read_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path)
 void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, 
 	vector<Point2f>&coor_ref_filtered, vector<Point2f>&coor_tar_filtered);
 
-int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&coor_ref_final, vector<Point2f>& coor_tar_final, MatrixXd& result);
+int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, 
+	vector<Point2f>&coor_ref_final, vector<Point2f>& coor_tar_final, MatrixXd& result);
 
-int run(Run_config config,string ref,string tar);
+int run(Run_config config,string ref,string tar, vector<Point2f>& result);
 

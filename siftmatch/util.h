@@ -12,7 +12,7 @@ using namespace cv;
 using namespace std;
 void aywait();
 
-void print_some_pairs(vector<Point2f> ref_coor, vector<Point2f> tar_coor, int num = 10);
+void print_some_pairs(vector<Point2f>& ref_coor, vector<Point2f>& tar_coor, int num = 10);
 
 void print_matrix(Mat& mat);
 
