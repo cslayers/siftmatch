@@ -37,11 +37,11 @@ typedef struct
 typedef struct
 {
 	Aysift_config aysift_con;
-	int NEIGH_NUM;
-	int gridspace;
-	int gradient_order;
-	int margin;
-	int subset_radius;
+	int NEIGH_NUM=12;
+	int gridspace=5;
+	int gradient_order=4;
+	int margin=10;
+	int subset_radius=16;
 }Run_config;//using square subset, same order,gridspace, and margin
 
 void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc,
@@ -66,5 +66,5 @@ void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar,
 int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, 
 	vector<Point2f>&coor_ref_final, vector<Point2f>& coor_tar_final, MatrixXd& result);
 
-int run(Run_config config,string ref,string tar, vector<Point2f>& result);
+Point2f run(Run_config config,string ref,string tar, vector<Point2f>& result);
 

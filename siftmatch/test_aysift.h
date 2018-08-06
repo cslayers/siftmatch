@@ -74,8 +74,10 @@ void test_run()
 	string imagetar = "./testdata/sin/sinref.tif";
 
 	vector<Point2f> result;
-	run(config,imageref,imagetar,result);
-	cout << result.size() << endl;
+	Point2f numberxy;
 
+	numberxy=run(config,imageref,imagetar,result);
+	cout << result.size() << endl;
+	cout << numberxy << endl;
 	aywait();
 }

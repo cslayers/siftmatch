@@ -55,3 +55,18 @@ void print_matrix(Mat& mat)
 	cout << endl;
 
 }
+
+void cppexp()
+{
+	St s;
+	cout << "s.a" << s.a << endl;
+	cout << "S.B" << s.b << endl;
+
+	cout << endl;
+
+	Sti si;
+	cout << "si.a " << si.a << endl;
+	cout << "Si.B " << si.b << endl;
+
+
+}

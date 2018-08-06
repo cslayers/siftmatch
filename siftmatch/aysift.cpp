@@ -314,7 +314,7 @@ int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&
 	return 0;
 }
 
-int run(Run_config config,string imageref,string imagetar, vector<Point2f>& result)
+Point2f run(Run_config config,string imageref,string imagetar, vector<Point2f>& result)
 {
 	vector<Point2f> coor_ref_init;
 	vector<Point2f> coor_tar_init;
@@ -427,7 +427,7 @@ int run(Run_config config,string imageref,string imagetar, vector<Point2f>& resu
 		Point2f guessi(sift_dx,sift_dy);
 		result.push_back(guessi);
 
-		if (1)
+		if (0)
 		{
 			cout << poi << ": result:" << guessi << "\t";
 			cout << (icoor1.size() - icoor1_f.size()) << " points out";
@@ -439,5 +439,5 @@ int run(Run_config config,string imageref,string imagetar, vector<Point2f>& resu
 		}
 	}
 
-	return 0;
+	return Point2f(numberx, numbery);
 }
