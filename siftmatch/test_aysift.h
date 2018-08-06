@@ -70,14 +70,22 @@ void test_run()
 	config.NEIGH_NUM = 12;
 	config.subset_radius = 16;
 
-	string imageref = "./testdata/sin/Sample3Reference.tif";
-	string imagetar = "./testdata/sin/sinref.tif";
+//	string imageref = "./testdata/sin/Sample3Reference.tif";
+//	string imagetar = "./testdata/sin/sinref.tif";
+	
+	string imageref = "./testdata/Sample14/Sample14 Reference.tif";
+	string imagetar = "./testdata/Sample14/Sample 14 L3 Amp0.1.tif";
+	string path = "./out/tmp.txt";
+	
 
 	vector<Point2f> result;
 	Point2f numberxy;
 
 	numberxy=run(config,imageref,imagetar,result);
+
+	
 	cout << result.size() << endl;
 	cout << numberxy << endl;
+	
 	aywait();
 }
