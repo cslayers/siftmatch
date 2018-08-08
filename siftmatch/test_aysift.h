@@ -83,7 +83,12 @@ void test_run()
 
 	numberxy=run(config,imageref,imagetar,result);
 
-	
+	int flag=write_result(result, path, numberxy);
+
+	if (!flag)
+		cout << "write successfully" << endl;
+
+
 	cout << result.size() << endl;
 	cout << numberxy << endl;
 	

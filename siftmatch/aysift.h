@@ -23,7 +23,7 @@ using namespace Eigen;
 
 
 #define AY_VERBOSE 1
-#define AY_USE_LOCAL_COO
+#define AY_USE_LOCAL_COO//R
 
 typedef struct
 {
@@ -44,9 +44,10 @@ typedef struct
 	int subset_radius=16;
 }Run_config;//using square subset, same order,gridspace, and margin
 
+
+
 void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc,
 	Aysift_config con);
-
 
 /*
 To get corresponding locations of two image by using sift and force match
@@ -56,10 +57,6 @@ void get_crspd(string path_ref, string path_tar, vector<Point2f>&coor_ref, vecto
 int nn_match_single(Mat & desc_ref, Mat & desc_tar, vector<KeyPoint>& kp_ref, 
 	vector<KeyPoint>& kp_tar, vector<Point2f>& coor_ref, vector<Point2f>& coor_tar);
 
-void write_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path);
-
-void read_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path);
-
 void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, 
 	vector<Point2f>&coor_ref_filtered, vector<Point2f>&coor_tar_filtered);
 
@@ -67,4 +64,12 @@ int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar,
 	vector<Point2f>&coor_ref_final, vector<Point2f>& coor_tar_final, MatrixXd& result);
 
 Point2f run(Run_config config,string ref,string tar, vector<Point2f>& result);
+
+
+
+void write_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path);
+void read_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path);
+
+
+int write_result(vector<Point2f>&result, string path, Point2f numberxy);
 

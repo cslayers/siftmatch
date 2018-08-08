@@ -4,6 +4,12 @@
 #include<omp.h>
 #include<iomanip>
 
+#include<fstream>
+#include<string>
+using namespace std;
+
+
+
 void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc, 
 	Aysift_config con)
 {
@@ -440,4 +446,34 @@ Point2f run(Run_config config,string imageref,string imagetar, vector<Point2f>& 
 	}
 
 	return Point2f(numberx, numbery);
+}
+
+
+int write_result(vector<Point2f>&result,string path,Point2f numberxy)
+{
+	ofstream out;
+	out.open(path);
+	if (out.is_open())
+	{
+		cout << "writing to" << path << endl;
+		int numberx = numberxy.x;
+		int numbery = numberxy.y;
+		for (int i = 0; i < numberx; i++)
+		{
+			for (int j = 0; j < numbery; j++)
+			{
+				int idx = i*numbery + j;
+				out << result[idx].x << " ";
+				out << result[idx].y << " ";
+			}
+		}
+		out << endl;
+		out.close();
+		return 0;
+	}
+	else
+	{
+		cout << "[-]Can not open " << path << endl;
+		return 1;//error
+	}
 }

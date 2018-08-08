@@ -1,1 +1,10 @@
-﻿  siftmatch.vcxproj -> D:\linaoyuData\workingcode\siftmatch\x64\Release\siftmatch.exe
+﻿  aysift.cpp
+aysift.cpp(448): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+aysift.cpp(459): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+aysift.cpp(460): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+  main.cpp
+  util.cpp
+  正在生成代码
+  All 5954 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  siftmatch.vcxproj -> C:\Users\cslay\Desktop\github\siftmatch\x64\Release\siftmatch.exe
