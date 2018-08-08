@@ -3,11 +3,15 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+<<<<<<< HEAD
 #include<nonfree/features2d.hpp>
 #include<nonfree/nonfree.hpp>
 
+=======
+>>>>>>> 6f795b27c5745364bbaa8c6d016393a1bff5946b
 using namespace cv;
 
+#include<cstdio>
 #include<vector>
 #include<iostream>
 using namespace std;

@@ -191,7 +191,7 @@ void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, vector<Point2f>&
 void write_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path)
 {
 	ofstream out;
-	out.open(path);
+	out.open(path.c_str());
 
 	for (int i = 0; i < coor_ref.size(); i++)
 	{
@@ -206,7 +206,7 @@ void write_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path
 void read_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path)
 {
 	ifstream in;
-	in.open(path);
+	in.open(path.c_str());
 	float tmp = 0.0;
 	float tmp1 = 0.0;
 	while (in >> tmp)
