@@ -452,7 +452,7 @@ Point2f run(Run_config config,string imageref,string imagetar, vector<Point2f>& 
 int write_result(vector<Point2f>&result,string path,Point2f numberxy)
 {
 	ofstream out;
-	out.open(path);
+	out.open(path.c_str());
 	if (out.is_open())
 	{
 		cout << "writing to" << path << endl;

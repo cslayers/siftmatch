@@ -15,6 +15,10 @@ omp.h
 -
 iomanip
 -
+fstream
+-
+string
+-
 
 /home/cslayee/siftmatch/siftmatch/aysift.h
 opencv2/core/core.hpp

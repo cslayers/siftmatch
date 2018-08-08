@@ -37,4 +37,4 @@ util.h
 util.cpp
 )
 
-target_link_libraries(siftmatchmain ${OpenCV_LIBRARIES})
+target_link_libraries(siftmatchmain ${OpenCV_LIBRARIES}  ${OpenMP_LIBS})
