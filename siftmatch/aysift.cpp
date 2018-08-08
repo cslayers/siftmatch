@@ -445,7 +445,7 @@ Point2f run(Run_config config,string imageref,string imagetar, vector<Point2f>& 
 		}
 	}
 
-	return Point2f(numberx, numbery);
+	return Point2f((float)numberx, (float)numbery);
 }
 
 
@@ -456,8 +456,8 @@ int write_result(vector<Point2f>&result,string path,Point2f numberxy)
 	if (out.is_open())
 	{
 		cout << "writing to" << path << endl;
-		int numberx = numberxy.x;
-		int numbery = numberxy.y;
+		int numberx = (int)numberxy.x;
+		int numbery = (int)numberxy.y;
 		for (int i = 0; i < numberx; i++)
 		{
 			for (int j = 0; j < numbery; j++)
