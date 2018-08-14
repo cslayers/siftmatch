@@ -13,7 +13,6 @@ using namespace boost::filesystem;
 #include<set>
 using namespace std;
 
-#include<Windows.h>
 
 
 Point2f get_resolution(string imagepath)
@@ -147,7 +146,6 @@ vector<string> find_file(string dir, string target)
 
 }
 
-
 void boost_timer()
 {
 
@@ -164,7 +162,6 @@ void boost_timer()
 	cout << t.elapsed() << endl;
 	
 }
-
 
 void boost_progress_display()
 {

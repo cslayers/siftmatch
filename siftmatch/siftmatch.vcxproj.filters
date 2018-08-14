@@ -24,15 +24,24 @@
     <ClCompile Include="util.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="exp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aysift.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="test_aysift.h">
+    <ClInclude Include="util.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="util.h">
+    <ClInclude Include="testboost.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="exp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="test_ground.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

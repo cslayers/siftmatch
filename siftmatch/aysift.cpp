@@ -38,6 +38,7 @@ void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc,
 	//print some infomation
 	if (AY_VERBOSE)
 	{
+		cout << __FUNCTION__ << endl;
 		cout << filename << " ";
 		cout << "[features num:" << kps.size() << "]";
 		cout << " [preparetime: " << time_start - time_init << "s]";
@@ -180,7 +181,8 @@ void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, vector<Point2f>&
 	}//for end
 
 	double time_end = omp_get_wtime();
-	cout << "[t]location filter time: " << time_end - time_start << "s " << endl;
+	if(AY_VERBOSE)
+		cout << "[t]location filter time: " << time_end - time_start << "s " << endl;
 }//function end
 
 
@@ -321,6 +323,7 @@ int ransac(vector<Point2f>&coor_ref, vector<Point2f>& coor_tar, vector<Point2f>&
 
 Point2f run(Run_config config,string imageref,string imagetar, vector<Point2f>& result)
 {
+	/*get guess xy*/
 	vector<Point2f> coor_ref_init;
 	vector<Point2f> coor_tar_init;
 	get_crspd(imageref, imagetar, coor_ref_init, coor_tar_init,config.aysift_con);
@@ -448,31 +451,5 @@ Point2f run(Run_config config,string imageref,string imagetar, vector<Point2f>& 
 }
 
 
-int write_result(vector<Point2f>&result,string path,Point2f numberxy)
-{
-	ofstream out;
-	out.open(path.c_str());
-	if (out.is_open())
-	{
-		cout << "writing to" << path << endl;
-		int numberx = (int)numberxy.x;
-		int numbery = (int)numberxy.y;
-		for (int i = 0; i < numberx; i++)
-		{
-			for (int j = 0; j < numbery; j++)
-			{
-				int idx = i*numbery + j;
-				out << result[idx].x << " ";
-				out << result[idx].y << " ";
-			}
-		}
-		out << endl;
-		out.close();
-		return 0;
-	}
-	else
-	{
-		cout << "[-]Can not open " << path << endl;
-		return 1;//error
-	}
-}
+
+

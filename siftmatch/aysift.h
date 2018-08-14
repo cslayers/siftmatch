@@ -23,7 +23,7 @@ using namespace Eigen;
 
 
 #define AY_VERBOSE 0
-#define AY_USE_LOCAL_COO//R
+#define AY_USE_LOCAL_COOR
 
 typedef struct
 {
@@ -43,6 +43,21 @@ typedef struct
 	int margin=10;
 	int subset_radius=16;
 }Run_config;//using square subset, same order,gridspace, and margin
+
+typedef struct
+{
+	float x=0,y=0;
+	float dp0[6]; //u ux uy v vx vy
+}Sift_Guess;
+
+
+typedef struct
+{
+	int numberx=0;
+	int numbery=0;
+	Sift_Guess* data=NULL;
+}Run_result;
+
 
 
 
@@ -71,5 +86,4 @@ void write_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path
 void read_crspd(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, string path);
 
 
-int write_result(vector<Point2f>&result, string path, Point2f numberxy);
 

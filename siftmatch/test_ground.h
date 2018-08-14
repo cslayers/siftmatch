@@ -1,7 +1,7 @@
 #pragma once
 #include"aysift.h"
 #include"util.h"
-
+#include"exp.h"
 
 void test_aysift()
 {
@@ -83,14 +83,50 @@ void test_run()
 
 	numberxy=run(config,imageref,imagetar,result);
 
-	int flag=write_result(result, path, numberxy);
-
-	if (!flag)
-		cout << "write successfully" << endl;
 
 
 	cout << result.size() << endl;
 	cout << numberxy << endl;
 	
 	aywait();
+}
+
+
+void test_registration()
+{
+	string ref = "C:\\Users\\cslay\\Desktop\\github\\siftmatch\\siftmatch\\testdata\\Sample3\\Sample3 Reference.tif";
+	string tar = "C:\\Users\\cslay\\Desktop\\github\\siftmatch\\siftmatch\\testdata\\Sample3\\Sample3-005 X0.50 Y0.50 N2 C0 R0.tif";
+	path refpath(ref);
+	path tarpath(tar);
+//	void registration(path refpath, path tarpath, Run_config config, Run_result result)
+
+	Run_config config;
+	Run_result result;
+	registration(refpath,tarpath,config,result);
+
+
+	cout << result.numberx << endl;
+	cout << result.numbery << endl;
+	
+	write_result(result, "./out/testwrite.txt");
+
+
+	if (result.data)
+		free(result.data);
+}
+
+
+void test_common_exp()
+{
+	/*string dir = "testdata/sample14";
+	string reffile = "Sample14 Reference.tif";
+	string outputdir = "outtest";*/
+
+
+	string dir = "testdata\\sample3";
+	string reffile = "xsin_reference.tif";
+	string outputdir = "";
+	common_exp(dir, reffile, outputdir);
+
+
 }

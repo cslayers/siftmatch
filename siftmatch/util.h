@@ -20,8 +20,6 @@ void print_matrix(Mat& mat);
 
 
 
-
-
 typedef struct
 {
 	int a;

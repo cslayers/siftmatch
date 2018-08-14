@@ -136,14 +136,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="aysift.cpp" />
+    <ClCompile Include="exp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aysift.h" />
+    <ClInclude Include="exp.h" />
     <ClInclude Include="testboost.h" />
     <ClInclude Include="util.h" />
-    <ClInclude Include="test_aysift.h" />
+    <ClInclude Include="test_ground.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
