@@ -16,7 +16,7 @@ void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc,
 	double time_init = omp_get_wtime();
 
 	Mat gray=imread(filename,1);
-	kps.resize(100000);
+	kps.resize(200000);
 	
 	SIFT sift(con.max_feature_num, 
 		con.kp_layer, 
@@ -27,7 +27,6 @@ void get_sift(string filename, vector<KeyPoint>&kps, Mat&desc,
 
 	//SIFT start
 	double time_start = omp_get_wtime();
-	
 	sift.detect(gray, kps);
 	double time_detect_end = omp_get_wtime();
 
@@ -172,7 +171,7 @@ void filter(vector<Point2f>&coor_ref, vector<Point2f>&coor_tar, vector<Point2f>&
 			}
 		}
 
-		#pragma omp critical
+		#pragma omp critical	
 		if (spe>0)
 		{
 			coor_ref_filter.push_back(coor_ref[i]);

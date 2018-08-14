@@ -1,0 +1,603 @@
+testdata\Sample1
+testdata\Sample10
+testdata\Sample11
+testdata\Sample11b
+testdata\Sample12
+testdata\Sample13a
+testdata\Sample13b
+testdata\Sample14
+testdata\Sample15
+testdata\Sample16-2
+testdata\Sample17
+testdata\Sample2
+testdata\Sample3
+testdata\Sample3b
+testdata\Sample4
+testdata\Sample5
+testdata\Sample6
+testdata\Sample8
+testdata\Sample9
+testdata\sin
+testdata\sin\2hz.gif
+testdata\sin\Sample3Reference.tif
+[2990] testdata\sin\Sample3Reference.tif
+testdata\sin\sin.tif
+[3016] testdata\sin\sin.tif
+testdata\sin\sinref.tif
+[3023] testdata\sin\sinref.tif
+testdata\sin\¶¯Ì¬Í¼10hz.gif
+[3009] features averaged        [DIR]: testdata\sin
+resolution: [512, 512]  density: 1.14784
+
+
+testdata\Sample9\Sample9 Reference.tif
+[10457] testdata\Sample9\Sample9 Reference.tif
+testdata\Sample9\Sample9-01.tif
+[10201] testdata\Sample9\Sample9-01.tif
+testdata\Sample9\Sample9-02.tif
+[10327] testdata\Sample9\Sample9-02.tif
+testdata\Sample9\Sample9-03.tif
+[10172] testdata\Sample9\Sample9-03.tif
+testdata\Sample9\Sample9-04.tif
+[10135] testdata\Sample9\Sample9-04.tif
+testdata\Sample9\Sample9-05.tif
+[10112] testdata\Sample9\Sample9-05.tif
+testdata\Sample9\Sample9-06.tif
+[9955] testdata\Sample9\Sample9-06.tif
+testdata\Sample9\Sample9-07.tif
+[9960] testdata\Sample9\Sample9-07.tif
+testdata\Sample9\Sample9-08.tif
+[9847] testdata\Sample9\Sample9-08.tif
+testdata\Sample9\Sample9-09.tif
+[9727] testdata\Sample9\Sample9-09.tif
+testdata\Sample9\Sample9-10.tif
+[9730] testdata\Sample9\Sample9-10.tif
+[10056] features averaged       [DIR]: testdata\Sample9
+resolution: [512, 512]  density: 3.83606
+
+
+testdata\Sample8\Rot_s1
+testdata\Sample8\Rot_s1\rot_s1_00.tif
+[5717] testdata\Sample8\Rot_s1\rot_s1_00.tif
+testdata\Sample8\Rot_s1\rot_s1_01.tif
+[5731] testdata\Sample8\Rot_s1\rot_s1_01.tif
+testdata\Sample8\Rot_s1\rot_s1_02.tif
+[5744] testdata\Sample8\Rot_s1\rot_s1_02.tif
+testdata\Sample8\Rot_s1\rot_s1_03.tif
+[5790] testdata\Sample8\Rot_s1\rot_s1_03.tif
+testdata\Sample8\Rot_s1\rot_s1_04.tif
+[5771] testdata\Sample8\Rot_s1\rot_s1_04.tif
+testdata\Sample8\Rot_s1\rot_s1_05.tif
+[5752] testdata\Sample8\Rot_s1\rot_s1_05.tif
+testdata\Sample8\Rot_s1\rot_s1_06.tif
+[5771] testdata\Sample8\Rot_s1\rot_s1_06.tif
+testdata\Sample8\Rot_s1\rot_s1_07.tif
+[5689] testdata\Sample8\Rot_s1\rot_s1_07.tif
+testdata\Sample8\Rot_s1\rot_s1_08.tif
+[5774] testdata\Sample8\Rot_s1\rot_s1_08.tif
+testdata\Sample8\Rot_s1\rot_s1_09.tif
+[5783] testdata\Sample8\Rot_s1\rot_s1_09.tif
+testdata\Sample8\Rot_s1\rot_s1_10.tif
+[5726] testdata\Sample8\Rot_s1\rot_s1_10.tif
+[5749] features averaged        [DIR]: testdata\Sample8\Rot_s1
+resolution: [512, 512]  density: 2.19307
+
+
+testdata\Sample6\Pro Dot G0_Y00 X00.tif
+[7245] testdata\Sample6\Pro Dot G0_Y00 X00.tif
+testdata\Sample6\Pro Dot G0_Y01 X01.tif
+[7434] testdata\Sample6\Pro Dot G0_Y01 X01.tif
+testdata\Sample6\Pro Dot G0_Y02 X02.tif
+[7240] testdata\Sample6\Pro Dot G0_Y02 X02.tif
+testdata\Sample6\Pro Dot G0_Y03 X03.tif
+[7304] testdata\Sample6\Pro Dot G0_Y03 X03.tif
+testdata\Sample6\Pro Dot G0_Y04 X04.tif
+[7323] testdata\Sample6\Pro Dot G0_Y04 X04.tif
+testdata\Sample6\Pro Dot G0_Y05 X05.tif
+[7271] testdata\Sample6\Pro Dot G0_Y05 X05.tif
+testdata\Sample6\Pro Dot G0_Y06 X06.tif
+[7352] testdata\Sample6\Pro Dot G0_Y06 X06.tif
+testdata\Sample6\Pro Dot G0_Y07 X07.tif
+[7142] testdata\Sample6\Pro Dot G0_Y07 X07.tif
+testdata\Sample6\Pro Dot G0_Y08 X08.tif
+[7159] testdata\Sample6\Pro Dot G0_Y08 X08.tif
+testdata\Sample6\Pro Dot G0_Y09 X09.tif
+[7228] testdata\Sample6\Pro Dot G0_Y09 X09.tif
+testdata\Sample6\Pro Dot G0_Y10 X10.tif
+[7253] testdata\Sample6\Pro Dot G0_Y10 X10.tif
+testdata\Sample6\Reference Image.tif
+[7278] testdata\Sample6\Reference Image.tif
+[7269] features averaged        [DIR]: testdata\Sample6
+resolution: [487, 325]  density: 4.59264
+
+
+testdata\Sample5\Sample5 Reference.tif
+[10669] testdata\Sample5\Sample5 Reference.tif
+testdata\Sample5\Sample5-000 X0.00 Y0.00 N2 C75 R10.tif
+[4518] testdata\Sample5\Sample5-000 X0.00 Y0.00 N2 C75 R10.tif
+testdata\Sample5\Sample5-001 X0.10 Y0.10 N2 C100 R20.tif
+[8785] testdata\Sample5\Sample5-001 X0.10 Y0.10 N2 C100 R20.tif
+testdata\Sample5\Sample5-002 X0.20 Y0.20 N2 C50 R50.tif
+[103] testdata\Sample5\Sample5-002 X0.20 Y0.20 N2 C50 R50.tif
+testdata\Sample5\Sample5-003 X0.30 Y0.30 N2 C150 R10.tif
+[10612] testdata\Sample5\Sample5-003 X0.30 Y0.30 N2 C150 R10.tif
+testdata\Sample5\Sample5-004 X0.40 Y0.40 N2 C75 R50.tif
+[3296] testdata\Sample5\Sample5-004 X0.40 Y0.40 N2 C75 R50.tif
+testdata\Sample5\Sample5-005 X0.50 Y0.50 N2 C150 R10.tif
+[10356] testdata\Sample5\Sample5-005 X0.50 Y0.50 N2 C150 R10.tif
+testdata\Sample5\Sample5-006 X0.60 Y0.60 N2 C200 R0.tif
+[10516] testdata\Sample5\Sample5-006 X0.60 Y0.60 N2 C200 R0.tif
+testdata\Sample5\Sample5-007 X0.70 Y0.70 N2 C50 R25.tif
+[9] testdata\Sample5\Sample5-007 X0.70 Y0.70 N2 C50 R25.tif
+testdata\Sample5\Sample5-008 X0.80 Y0.80 N2 C75 R25.tif
+[3154] testdata\Sample5\Sample5-008 X0.80 Y0.80 N2 C75 R25.tif
+testdata\Sample5\Sample5-009 X0.90 Y0.90 N2 C100 R10.tif
+[7491] testdata\Sample5\Sample5-009 X0.90 Y0.90 N2 C100 R10.tif
+testdata\Sample5\Sample5-010 X1.00 Y1.00 N2 C200 R5.tif
+[10681] testdata\Sample5\Sample5-010 X1.00 Y1.00 N2 C200 R5.tif
+[6682] features averaged        [DIR]: testdata\Sample5
+resolution: [512, 512]  density: 2.54898
+
+
+testdata\Sample4\Sample 4 Reference.tif
+[73] testdata\Sample4\Sample 4 Reference.tif
+testdata\Sample4\Sample4-000 X0.00 Y0.00 N8 C50 R0.tif
+[80] testdata\Sample4\Sample4-000 X0.00 Y0.00 N8 C50 R0.tif
+testdata\Sample4\Sample4-001 X0.10 Y0.10 N8 C50 R0.tif
+[75] testdata\Sample4\Sample4-001 X0.10 Y0.10 N8 C50 R0.tif
+testdata\Sample4\Sample4-002 X0.20 Y0.20 N8 C50 R0.tif
+[90] testdata\Sample4\Sample4-002 X0.20 Y0.20 N8 C50 R0.tif
+testdata\Sample4\Sample4-003 X0.30 Y0.30 N8 C50 R0.tif
+[81] testdata\Sample4\Sample4-003 X0.30 Y0.30 N8 C50 R0.tif
+testdata\Sample4\Sample4-004 X0.40 Y0.40 N8 C50 R0.tif
+[74] testdata\Sample4\Sample4-004 X0.40 Y0.40 N8 C50 R0.tif
+testdata\Sample4\Sample4-005 X0.50 Y0.50 N8 C50 R0.tif
+[74] testdata\Sample4\Sample4-005 X0.50 Y0.50 N8 C50 R0.tif
+testdata\Sample4\Sample4-006 X0.60 Y0.60 N8 C50 R0.tif
+[53] testdata\Sample4\Sample4-006 X0.60 Y0.60 N8 C50 R0.tif
+testdata\Sample4\Sample4-007 X0.70 Y0.70 N8 C50 R0.tif
+[90] testdata\Sample4\Sample4-007 X0.70 Y0.70 N8 C50 R0.tif
+testdata\Sample4\Sample4-008 X0.80 Y0.80 N8 C50 R0.tif
+[82] testdata\Sample4\Sample4-008 X0.80 Y0.80 N8 C50 R0.tif
+testdata\Sample4\Sample4-009 X0.90 Y0.90 N8 C50 R0.tif
+[75] testdata\Sample4\Sample4-009 X0.90 Y0.90 N8 C50 R0.tif
+testdata\Sample4\Sample4-010 X1.00 Y1.00 N8 C50 R0.tif
+[83] testdata\Sample4\Sample4-010 X1.00 Y1.00 N8 C50 R0.tif
+[77] features averaged  [DIR]: testdata\Sample4
+resolution: [512, 512]  density: 0.0293732
+
+
+testdata\Sample3b\Sample3b
+testdata\Sample3b\Sample3b\Sample3 Half005.tif
+[2976] testdata\Sample3b\Sample3b\Sample3 Half005.tif
+testdata\Sample3b\Sample3b\Sample3 Half01 02.tif
+[2981] testdata\Sample3b\Sample3b\Sample3 Half01 02.tif
+testdata\Sample3b\Sample3b\Sample3 Half01.tif
+[2988] testdata\Sample3b\Sample3b\Sample3 Half01.tif
+testdata\Sample3b\Sample3b\Sample3 Half02.tif
+[2978] testdata\Sample3b\Sample3b\Sample3 Half02.tif
+testdata\Sample3b\Sample3b\Sample3 Half025.tif
+[2989] testdata\Sample3b\Sample3b\Sample3 Half025.tif
+testdata\Sample3b\Sample3b\Sample3 Half05.tif
+[2971] testdata\Sample3b\Sample3b\Sample3 Half05.tif
+testdata\Sample3b\Sample3b\Sample3 Reference.tif
+[2990] testdata\Sample3b\Sample3b\Sample3 Reference.tif
+[2981] features averaged        [DIR]: testdata\Sample3b\Sample3b
+resolution: [512, 512]  density: 1.13716
+
+
+testdata\Sample3\Sample3 Reference.tif
+[2990] testdata\Sample3\Sample3 Reference.tif
+testdata\Sample3\Sample3-000 X0.00 Y0.00 N2 C0 R0.tif
+[2988] testdata\Sample3\Sample3-000 X0.00 Y0.00 N2 C0 R0.tif
+testdata\Sample3\Sample3-001 X0.10 Y0.10 N2 C0 R0.tif
+[2960] testdata\Sample3\Sample3-001 X0.10 Y0.10 N2 C0 R0.tif
+testdata\Sample3\Sample3-002 X0.20 Y0.20 N2 C0 R0.tif
+[2948] testdata\Sample3\Sample3-002 X0.20 Y0.20 N2 C0 R0.tif
+testdata\Sample3\Sample3-003 X0.30 Y0.30 N2 C0 R0.tif
+[2971] testdata\Sample3\Sample3-003 X0.30 Y0.30 N2 C0 R0.tif
+testdata\Sample3\Sample3-004 X0.40 Y0.40 N2 C0 R0.tif
+[2926] testdata\Sample3\Sample3-004 X0.40 Y0.40 N2 C0 R0.tif
+testdata\Sample3\Sample3-005 X0.50 Y0.50 N2 C0 R0.tif
+[3012] testdata\Sample3\Sample3-005 X0.50 Y0.50 N2 C0 R0.tif
+testdata\Sample3\Sample3-006 X0.60 Y0.60 N2 C0 R0.tif
+[2990] testdata\Sample3\Sample3-006 X0.60 Y0.60 N2 C0 R0.tif
+testdata\Sample3\Sample3-007 X0.70 Y0.70 N2 C0 R0.tif
+[2933] testdata\Sample3\Sample3-007 X0.70 Y0.70 N2 C0 R0.tif
+testdata\Sample3\Sample3-008 X0.80 Y0.80 N2 C0 R0.tif
+[2979] testdata\Sample3\Sample3-008 X0.80 Y0.80 N2 C0 R0.tif
+testdata\Sample3\Sample3-009 X0.90 Y0.90 N2 C0 R0.tif
+[2927] testdata\Sample3\Sample3-009 X0.90 Y0.90 N2 C0 R0.tif
+testdata\Sample3\Sample3-010 X1.00 Y1.00 N2 C0 R0.tif
+[2971] testdata\Sample3\Sample3-010 X1.00 Y1.00 N2 C0 R0.tif
+testdata\Sample3\sin.tif
+[3016] testdata\Sample3\sin.tif
+testdata\Sample3\sin_reference.tif
+[3016] testdata\Sample3\sin_reference.tif
+[2973] features averaged        [DIR]: testdata\Sample3
+resolution: [512, 512]  density: 1.13411
+
+
+testdata\Sample2\trs2_b8_00.tif
+[1170] testdata\Sample2\trs2_b8_00.tif
+testdata\Sample2\trs2_b8_01.tif
+[1210] testdata\Sample2\trs2_b8_01.tif
+testdata\Sample2\trs2_b8_02.tif
+[1219] testdata\Sample2\trs2_b8_02.tif
+testdata\Sample2\trs2_b8_03.tif
+[1187] testdata\Sample2\trs2_b8_03.tif
+testdata\Sample2\trs2_b8_04.tif
+[1207] testdata\Sample2\trs2_b8_04.tif
+testdata\Sample2\trs2_b8_05.tif
+[1185] testdata\Sample2\trs2_b8_05.tif
+testdata\Sample2\trs2_b8_06.tif
+[1201] testdata\Sample2\trs2_b8_06.tif
+testdata\Sample2\trs2_b8_07.tif
+[1217] testdata\Sample2\trs2_b8_07.tif
+testdata\Sample2\trs2_b8_08.tif
+[1172] testdata\Sample2\trs2_b8_08.tif
+testdata\Sample2\trs2_b8_09.tif
+[1195] testdata\Sample2\trs2_b8_09.tif
+testdata\Sample2\trs2_b8_10.tif
+[1270] testdata\Sample2\trs2_b8_10.tif
+testdata\Sample2\trs2_b8_11.tif
+[1232] testdata\Sample2\trs2_b8_11.tif
+testdata\Sample2\trs2_b8_12.tif
+[1195] testdata\Sample2\trs2_b8_12.tif
+testdata\Sample2\trs2_b8_13.tif
+[1190] testdata\Sample2\trs2_b8_13.tif
+testdata\Sample2\trs2_b8_14.tif
+[1209] testdata\Sample2\trs2_b8_14.tif
+testdata\Sample2\trs2_b8_15.tif
+[1206] testdata\Sample2\trs2_b8_15.tif
+testdata\Sample2\trs2_b8_16.tif
+[1167] testdata\Sample2\trs2_b8_16.tif
+testdata\Sample2\trs2_b8_17.tif
+[1219] testdata\Sample2\trs2_b8_17.tif
+testdata\Sample2\trs2_b8_18.tif
+[1172] testdata\Sample2\trs2_b8_18.tif
+testdata\Sample2\trs2_b8_19.tif
+[1198] testdata\Sample2\trs2_b8_19.tif
+testdata\Sample2\trs2_b8_20.tif
+[1174] testdata\Sample2\trs2_b8_20.tif
+[1199] features averaged        [DIR]: testdata\Sample2
+resolution: [512, 512]  density: 0.457382
+
+
+testdata\Sample17\Sample17
+testdata\Sample17\Sample17\GRAS-test1-0000_0.tif
+[173685] testdata\Sample17\Sample17\GRAS-test1-0000_0.tif
+testdata\Sample17\Sample17\GRAS-test1-0005_0.tif
+[172066] testdata\Sample17\Sample17\GRAS-test1-0005_0.tif
+testdata\Sample17\Sample17\GRAS-test1-0010_0.tif
+[171128] testdata\Sample17\Sample17\GRAS-test1-0010_0.tif
+testdata\Sample17\Sample17\GRAS-test1-0020_0.tif
+[168852] testdata\Sample17\Sample17\GRAS-test1-0020_0.tif
+testdata\Sample17\Sample17\GRAS-test1-0040_0.tif
+[163479] testdata\Sample17\Sample17\GRAS-test1-0040_0.tif
+testdata\Sample17\Sample17\GRAS-test1-0050_0.tif
+[160107] testdata\Sample17\Sample17\GRAS-test1-0050_0.tif
+testdata\Sample17\Sample17\Thumbs.db
+[168219] features averaged      [DIR]: testdata\Sample17\Sample17
+resolution: [2448, 2048]        density: 3.35532
+
+
+testdata\Sample16-2\Sample16
+testdata\Sample16-2\Sample16\50pix-test1-0000_0-Dec-Avg 00000.tif
+[7325] testdata\Sample16-2\Sample16\50pix-test1-0000_0-Dec-Avg 00000.tif
+testdata\Sample16-2\Sample16\50pix-test1-0005_0-Dec-Avg 00005.tif
+[7344] testdata\Sample16-2\Sample16\50pix-test1-0005_0-Dec-Avg 00005.tif
+testdata\Sample16-2\Sample16\50pix-test1-0010_0-Dec-Avg 00010.tif
+[7294] testdata\Sample16-2\Sample16\50pix-test1-0010_0-Dec-Avg 00010.tif
+testdata\Sample16-2\Sample16\50pix-test1-0015_0-Dec-Avg 00015.tif
+[7311] testdata\Sample16-2\Sample16\50pix-test1-0015_0-Dec-Avg 00015.tif
+testdata\Sample16-2\Sample16\50pix-test1-0020_0-Dec-Avg 00020.tif
+[7335] testdata\Sample16-2\Sample16\50pix-test1-0020_0-Dec-Avg 00020.tif
+testdata\Sample16-2\Sample16\50pix-test1-0025_0-Dec-Avg 00025.tif
+[7339] testdata\Sample16-2\Sample16\50pix-test1-0025_0-Dec-Avg 00025.tif
+testdata\Sample16-2\Sample16\50pix-test1-0030_0-Dec-Avg 00030.tif
+[7343] testdata\Sample16-2\Sample16\50pix-test1-0030_0-Dec-Avg 00030.tif
+testdata\Sample16-2\Sample16\50pix-test1-0035_0-Dec-Avg 00035.tif
+[7379] testdata\Sample16-2\Sample16\50pix-test1-0035_0-Dec-Avg 00035.tif
+testdata\Sample16-2\Sample16\50pix-test1-0040_0-Dec-Avg 00040.tif
+[7409] testdata\Sample16-2\Sample16\50pix-test1-0040_0-Dec-Avg 00040.tif
+testdata\Sample16-2\Sample16\50pix-test1-0045_0-Dec-Avg 00045.tif
+[7343] testdata\Sample16-2\Sample16\50pix-test1-0045_0-Dec-Avg 00045.tif
+testdata\Sample16-2\Sample16\50pix-test1-0050_0-Dec-Avg 00050.tif
+[7319] testdata\Sample16-2\Sample16\50pix-test1-0050_0-Dec-Avg 00050.tif
+testdata\Sample16-2\Sample16\Stage position information.xlsx
+[7340] features averaged        [DIR]: testdata\Sample16-2\Sample16
+resolution: [487, 325]  density: 4.6375
+
+
+testdata\Sample15\CommandedDisplacementLineCut.xlsx
+testdata\Sample15\P200_K100_N2.tif
+[45109] testdata\Sample15\P200_K100_N2.tif
+testdata\Sample15\P200_K150_N2.tif
+[45163] testdata\Sample15\P200_K150_N2.tif
+testdata\Sample15\P200_K200_N2.tif
+[45135] testdata\Sample15\P200_K200_N2.tif
+testdata\Sample15\P200_K250_N2.tif
+[45068] testdata\Sample15\P200_K250_N2.tif
+testdata\Sample15\P200_K300_N2.tif
+[45064] testdata\Sample15\P200_K300_N2.tif
+testdata\Sample15\P200_K350_N2.tif
+[45113] testdata\Sample15\P200_K350_N2.tif
+testdata\Sample15\P200_K400_N2.tif
+[45056] testdata\Sample15\P200_K400_N2.tif
+testdata\Sample15\P200_K50_N2.tif
+[44986] testdata\Sample15\P200_K50_N2.tif
+testdata\Sample15\Reference.tif
+[45484] testdata\Sample15\Reference.tif
+[45130] features averaged       [DIR]: testdata\Sample15
+resolution: [2000, 1000]        density: 2.2565
+
+
+testdata\Sample14\Sample 14 Commanded Displacement.csv
+testdata\Sample14\Sample 14 L1 Amp0.1.tif
+[24140] testdata\Sample14\Sample 14 L1 Amp0.1.tif
+testdata\Sample14\Sample 14 L3 Amp0.1.tif
+[24187] testdata\Sample14\Sample 14 L3 Amp0.1.tif
+testdata\Sample14\Sample 14 L5 Amp0.1.tif
+[24217] testdata\Sample14\Sample 14 L5 Amp0.1.tif
+testdata\Sample14\Sample14 Reference.tif
+[23874] testdata\Sample14\Sample14 Reference.tif
+[24104] features averaged       [DIR]: testdata\Sample14
+resolution: [2048, 588] density: 2.00162
+
+
+testdata\Sample13b\pw-0mil-p2-n14-520_0.tif
+[1789] testdata\Sample13b\pw-0mil-p2-n14-520_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-540_0.tif
+[1596] testdata\Sample13b\pw-0mil-p2-n14-540_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-560_0.tif
+[1438] testdata\Sample13b\pw-0mil-p2-n14-560_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-580_0.tif
+[1479] testdata\Sample13b\pw-0mil-p2-n14-580_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-600_0.tif
+[1438] testdata\Sample13b\pw-0mil-p2-n14-600_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-620_0.tif
+[1363] testdata\Sample13b\pw-0mil-p2-n14-620_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-640_0.tif
+[1360] testdata\Sample13b\pw-0mil-p2-n14-640_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-660_0.tif
+[1326] testdata\Sample13b\pw-0mil-p2-n14-660_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-680_0.tif
+[1236] testdata\Sample13b\pw-0mil-p2-n14-680_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-700_0.tif
+[1232] testdata\Sample13b\pw-0mil-p2-n14-700_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-720_0.tif
+[1181] testdata\Sample13b\pw-0mil-p2-n14-720_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-740_0.tif
+[1182] testdata\Sample13b\pw-0mil-p2-n14-740_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-760_0.tif
+[1318] testdata\Sample13b\pw-0mil-p2-n14-760_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-780_0.tif
+[1210] testdata\Sample13b\pw-0mil-p2-n14-780_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-800_0.tif
+[1169] testdata\Sample13b\pw-0mil-p2-n14-800_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-820_0.tif
+[1127] testdata\Sample13b\pw-0mil-p2-n14-820_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-840_0.tif
+[1005] testdata\Sample13b\pw-0mil-p2-n14-840_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-860_0.tif
+[1149] testdata\Sample13b\pw-0mil-p2-n14-860_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-880_0.tif
+[1098] testdata\Sample13b\pw-0mil-p2-n14-880_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-885_0.tif
+[1107] testdata\Sample13b\pw-0mil-p2-n14-885_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-890_0.tif
+[1083] testdata\Sample13b\pw-0mil-p2-n14-890_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-895_0.tif
+[1073] testdata\Sample13b\pw-0mil-p2-n14-895_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-900_0.tif
+[994] testdata\Sample13b\pw-0mil-p2-n14-900_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-905_0.tif
+[1026] testdata\Sample13b\pw-0mil-p2-n14-905_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-910_0.tif
+[998] testdata\Sample13b\pw-0mil-p2-n14-910_0.tif
+testdata\Sample13b\pw-0mil-p2-n14-915_0.tif
+[180] testdata\Sample13b\pw-0mil-p2-n14-915_0.tif
+[1198] features averaged        [DIR]: testdata\Sample13b
+resolution: [1040, 1392]        density: 0.0827531
+
+
+testdata\Sample13a\pw-0mil-p2-n14-000_0.tif
+[11118] testdata\Sample13a\pw-0mil-p2-n14-000_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-020_0.tif
+[12102] testdata\Sample13a\pw-0mil-p2-n14-020_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-040_0.tif
+[11464] testdata\Sample13a\pw-0mil-p2-n14-040_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-060_0.tif
+[11220] testdata\Sample13a\pw-0mil-p2-n14-060_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-080_0.tif
+[10499] testdata\Sample13a\pw-0mil-p2-n14-080_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-100_0.tif
+[9884] testdata\Sample13a\pw-0mil-p2-n14-100_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-120_0.tif
+[9231] testdata\Sample13a\pw-0mil-p2-n14-120_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-140_0.tif
+[8742] testdata\Sample13a\pw-0mil-p2-n14-140_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-160_0.tif
+[8164] testdata\Sample13a\pw-0mil-p2-n14-160_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-180_0.tif
+[7329] testdata\Sample13a\pw-0mil-p2-n14-180_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-200_0.tif
+[7044] testdata\Sample13a\pw-0mil-p2-n14-200_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-220_0.tif
+[6831] testdata\Sample13a\pw-0mil-p2-n14-220_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-240_0.tif
+[5733] testdata\Sample13a\pw-0mil-p2-n14-240_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-260_0.tif
+[5839] testdata\Sample13a\pw-0mil-p2-n14-260_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-280_0.tif
+[4986] testdata\Sample13a\pw-0mil-p2-n14-280_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-300_0.tif
+[4546] testdata\Sample13a\pw-0mil-p2-n14-300_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-320_0.tif
+[4153] testdata\Sample13a\pw-0mil-p2-n14-320_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-340_0.tif
+[3819] testdata\Sample13a\pw-0mil-p2-n14-340_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-360_0.tif
+[3438] testdata\Sample13a\pw-0mil-p2-n14-360_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-380_0.tif
+[3159] testdata\Sample13a\pw-0mil-p2-n14-380_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-400_0.tif
+[3007] testdata\Sample13a\pw-0mil-p2-n14-400_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-420_0.tif
+[2596] testdata\Sample13a\pw-0mil-p2-n14-420_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-440_0.tif
+[2458] testdata\Sample13a\pw-0mil-p2-n14-440_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-460_0.tif
+[2273] testdata\Sample13a\pw-0mil-p2-n14-460_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-480_0.tif
+[2063] testdata\Sample13a\pw-0mil-p2-n14-480_0.tif
+testdata\Sample13a\pw-0mil-p2-n14-500_0.tif
+[1806] testdata\Sample13a\pw-0mil-p2-n14-500_0.tif
+[6288] features averaged        [DIR]: testdata\Sample13a
+resolution: [1040, 1392]        density: 0.43435
+
+
+testdata\Sample12\oht_cfrp_00.tiff
+[10994] testdata\Sample12\oht_cfrp_00.tiff
+testdata\Sample12\oht_cfrp_01.tiff
+[10833] testdata\Sample12\oht_cfrp_01.tiff
+testdata\Sample12\oht_cfrp_02.tiff
+[10841] testdata\Sample12\oht_cfrp_02.tiff
+testdata\Sample12\oht_cfrp_03.tiff
+[10876] testdata\Sample12\oht_cfrp_03.tiff
+testdata\Sample12\oht_cfrp_04.tiff
+[10794] testdata\Sample12\oht_cfrp_04.tiff
+testdata\Sample12\oht_cfrp_05.tiff
+[10960] testdata\Sample12\oht_cfrp_05.tiff
+testdata\Sample12\oht_cfrp_06.tiff
+[10912] testdata\Sample12\oht_cfrp_06.tiff
+testdata\Sample12\oht_cfrp_07.tiff
+[10897] testdata\Sample12\oht_cfrp_07.tiff
+testdata\Sample12\oht_cfrp_08.tiff
+[10941] testdata\Sample12\oht_cfrp_08.tiff
+testdata\Sample12\oht_cfrp_09.tiff
+[10838] testdata\Sample12\oht_cfrp_09.tiff
+testdata\Sample12\oht_cfrp_10.tiff
+[10775] testdata\Sample12\oht_cfrp_10.tiff
+testdata\Sample12\oht_cfrp_11.tiff
+[10799] testdata\Sample12\oht_cfrp_11.tiff
+[10871] features averaged       [DIR]: testdata\Sample12
+resolution: [400, 1040] density: 2.61322
+
+
+testdata\Sample11b\Sample11b
+testdata\Sample11b\Sample11b\Sample 11b Tri-0.01.tif
+[10650] testdata\Sample11b\Sample11b\Sample 11b Tri-0.01.tif
+testdata\Sample11b\Sample11b\Sample 11b Tri-0.05.tif
+[10573] testdata\Sample11b\Sample11b\Sample 11b Tri-0.05.tif
+testdata\Sample11b\Sample11b\Sample 11b Tri-0.1.tif
+[10603] testdata\Sample11b\Sample11b\Sample 11b Tri-0.1.tif
+testdata\Sample11b\Sample11b\Sample 11b Tri-0.5.tif
+[10583] testdata\Sample11b\Sample11b\Sample 11b Tri-0.5.tif
+testdata\Sample11b\Sample11b\Sample 11b Tri-1.tif
+[10613] testdata\Sample11b\Sample11b\Sample 11b Tri-1.tif
+testdata\Sample11b\Sample11b\Sample11b Reference.tif
+[10669] testdata\Sample11b\Sample11b\Sample11b Reference.tif
+[10615] features averaged       [DIR]: testdata\Sample11b\Sample11b
+resolution: [512, 512]  density: 4.0493
+
+
+testdata\Sample11\Sample11
+testdata\Sample11\Sample11\aab_b2_00.tif
+[1916] testdata\Sample11\Sample11\aab_b2_00.tif
+testdata\Sample11\Sample11\aab_b2_01.tif
+[1781] testdata\Sample11\Sample11\aab_b2_01.tif
+testdata\Sample11\Sample11\aab_b2_02.tif
+[1729] testdata\Sample11\Sample11\aab_b2_02.tif
+testdata\Sample11\Sample11\aab_b2_03.tif
+[1627] testdata\Sample11\Sample11\aab_b2_03.tif
+testdata\Sample11\Sample11\aab_b2_04.tif
+[1589] testdata\Sample11\Sample11\aab_b2_04.tif
+testdata\Sample11\Sample11\aab_b2_05.tif
+[1541] testdata\Sample11\Sample11\aab_b2_05.tif
+testdata\Sample11\Sample11\aab_b2_06.tif
+[1465] testdata\Sample11\Sample11\aab_b2_06.tif
+testdata\Sample11\Sample11\aab_b2_07.tif
+[1379] testdata\Sample11\Sample11\aab_b2_07.tif
+testdata\Sample11\Sample11\aab_b2_08.tif
+[1245] testdata\Sample11\Sample11\aab_b2_08.tif
+testdata\Sample11\Sample11\aab_b2_09.tif
+[1081] testdata\Sample11\Sample11\aab_b2_09.tif
+[1535] features averaged        [DIR]: testdata\Sample11\Sample11
+resolution: [512, 512]  density: 0.585556
+
+
+testdata\Sample10\Sample10
+testdata\Sample10\Sample10\aaa_b2_00.tif
+[4570] testdata\Sample10\Sample10\aaa_b2_00.tif
+testdata\Sample10\Sample10\aaa_b2_01.tif
+[4322] testdata\Sample10\Sample10\aaa_b2_01.tif
+testdata\Sample10\Sample10\aaa_b2_02.tif
+[4083] testdata\Sample10\Sample10\aaa_b2_02.tif
+testdata\Sample10\Sample10\aaa_b2_03.tif
+[3773] testdata\Sample10\Sample10\aaa_b2_03.tif
+testdata\Sample10\Sample10\aaa_b2_04.tif
+[3657] testdata\Sample10\Sample10\aaa_b2_04.tif
+testdata\Sample10\Sample10\aaa_b2_05.tif
+[3488] testdata\Sample10\Sample10\aaa_b2_05.tif
+testdata\Sample10\Sample10\aaa_b2_06.tif
+[3203] testdata\Sample10\Sample10\aaa_b2_06.tif
+testdata\Sample10\Sample10\aaa_b2_07.tif
+[2746] testdata\Sample10\Sample10\aaa_b2_07.tif
+testdata\Sample10\Sample10\aaa_b2_08.tif
+[2128] testdata\Sample10\Sample10\aaa_b2_08.tif
+testdata\Sample10\Sample10\aaa_b2_09.tif
+[1137] testdata\Sample10\Sample10\aaa_b2_09.tif
+[3310] features averaged        [DIR]: testdata\Sample10\Sample10
+resolution: [512, 512]  density: 1.26266
+
+
+testdata\Sample1\trxy_s2_00.tif
+[8916] testdata\Sample1\trxy_s2_00.tif
+testdata\Sample1\trxy_s2_01.tif
+[8902] testdata\Sample1\trxy_s2_01.tif
+testdata\Sample1\trxy_s2_02.tif
+[8965] testdata\Sample1\trxy_s2_02.tif
+testdata\Sample1\trxy_s2_03.tif
+[8960] testdata\Sample1\trxy_s2_03.tif
+testdata\Sample1\trxy_s2_04.tif
+[8892] testdata\Sample1\trxy_s2_04.tif
+testdata\Sample1\trxy_s2_05.tif
+[8948] testdata\Sample1\trxy_s2_05.tif
+testdata\Sample1\trxy_s2_06.tif
+[8835] testdata\Sample1\trxy_s2_06.tif
+testdata\Sample1\trxy_s2_07.tif
+[8898] testdata\Sample1\trxy_s2_07.tif
+testdata\Sample1\trxy_s2_08.tif
+[8868] testdata\Sample1\trxy_s2_08.tif
+testdata\Sample1\trxy_s2_09.tif
+[8759] testdata\Sample1\trxy_s2_09.tif
+testdata\Sample1\trxy_s2_10.tif
+[8730] testdata\Sample1\trxy_s2_10.tif
+testdata\Sample1\trxy_s2_11.tif
+[8638] testdata\Sample1\trxy_s2_11.tif
+testdata\Sample1\trxy_s2_12.tif
+[8705] testdata\Sample1\trxy_s2_12.tif
+testdata\Sample1\trxy_s2_13.tif
+[8660] testdata\Sample1\trxy_s2_13.tif
+testdata\Sample1\trxy_s2_14.tif
+[8553] testdata\Sample1\trxy_s2_14.tif
+testdata\Sample1\trxy_s2_15.tif
+[8563] testdata\Sample1\trxy_s2_15.tif
+testdata\Sample1\trxy_s2_16.tif
+[8467] testdata\Sample1\trxy_s2_16.tif
+testdata\Sample1\trxy_s2_17.tif
+[8499] testdata\Sample1\trxy_s2_17.tif
+testdata\Sample1\trxy_s2_18.tif
+[8448] testdata\Sample1\trxy_s2_18.tif
+testdata\Sample1\trxy_s2_19.tif
+[8356] testdata\Sample1\trxy_s2_19.tif
+testdata\Sample1\trxy_s2_20.tif
+[8284] testdata\Sample1\trxy_s2_20.tif
+[8706] features averaged        [DIR]: testdata\Sample1
+resolution: [512, 512]  density: 3.32108
+
+
+
+Ay waitting a character to continue...

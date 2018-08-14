@@ -14,6 +14,8 @@ int main()
 	//test_get_corr();
 	//test_run();
 
+	test_file();
+	
 
 	aywait();
 
