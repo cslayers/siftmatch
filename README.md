@@ -5,3 +5,5 @@ Some code using SIFT OPENCV, with time info.
   OpenCV(version 2.4.13 is recommended)
 
   Eigen
+  
+  boost
