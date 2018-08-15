@@ -17,7 +17,7 @@ int main()
 
 	//test_common_exp();
 
-	test_sift_time();
+		test_sift_time();
 	
 
 	aywait();

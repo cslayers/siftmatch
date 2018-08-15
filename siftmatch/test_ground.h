@@ -122,9 +122,9 @@ void test_common_exp()
 	string reffile = "Sample14 Reference.tif";
 	string outputdir = "outtest";*/
 
-	string dir = "testdata\\sample3";
+	string dir = "testdata\\sample14";
 	string reffile = "";
-	string outputdir = "out";
+	string outputdir = dir;
 	common_exp(dir, reffile, outputdir);
 
 
