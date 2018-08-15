@@ -6,7 +6,7 @@ string find_ref_file(vector<path>& files)
 {
 	for (auto& file : files)
 	{
-		if (file.filename().string().find("reference") != string::npos)
+		if (file.filename().string().find("eference") != string::npos)
 		{
 			//founded
 			string res = file.filename().string();
@@ -300,6 +300,8 @@ void common_exp(string dir,string ref_file,string outputdir)
 			write_result(result, outfilename);
 			
 			good(tarpath.string() << " done");
+			infoinline("\t");
+			good("Write to: " << outfilename);
 
 		}
 	}
