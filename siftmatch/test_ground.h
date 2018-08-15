@@ -94,16 +94,19 @@ void test_run()
 
 void test_registration()
 {
-	string ref = "C:\\Users\\cslay\\Desktop\\github\\siftmatch\\siftmatch\\testdata\\Sample3\\Sample3 Reference.tif";
-	string tar = "C:\\Users\\cslay\\Desktop\\github\\siftmatch\\siftmatch\\testdata\\Sample3\\Sample3-005 X0.50 Y0.50 N2 C0 R0.tif";
+	//string ref = "C:\\Users\\cslay\\Desktop\\github\\siftmatch\\siftmatch\\testdata\\Sample14\\Sample 14 L1 Amp0.1.tif";
+	//string ref = "C:\\Users\\cslay\\Desktop\\github\\siftmatch\\siftmatch\\testdata\\Sample14\\Sample 14 L1 Amp0.1.tif";
+	string tar = "C:\\Users\\cslay\\Desktop\\github\\siftmatch\\siftmatch\\testdata\\Sample17\\Sample17\\GRAS-test1-0000_0.tif";
+	string ref = "C:\\Users\\cslay\\Desktop\\github\\siftmatch\\siftmatch\\testdata\\Sample17\\Sample17\\GRAS-test1-0005_0.tif";
 	path refpath(ref);
 	path tarpath(tar);
 //	void registration(path refpath, path tarpath, Run_config config, Run_result result)
 
 	Run_config config;
 	Run_result result;
+	timer t;
 	registration(refpath,tarpath,config,result);
-
+	cout << t.elapsed() << " total" << endl;
 
 	cout << result.numberx << endl;
 	cout << result.numbery << endl;
@@ -146,3 +149,5 @@ void test_sift_time()
 		cout << endl;
 	}
 }
+
+

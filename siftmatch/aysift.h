@@ -22,7 +22,7 @@ using namespace Eigen;
 
 
 
-#define AY_VERBOSE 0
+#define AY_VERBOSE 1
 #define AY_USE_LOCAL_COOR
 
 typedef struct

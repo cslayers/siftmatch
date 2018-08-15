@@ -118,6 +118,7 @@ void registration(path refpath,path tarpath,Run_config config,Run_result& result
 	vector<Point2f> coor_tar;
 	filter(coor_ref_init, coor_tar_init, coor_ref, coor_tar);
 
+	timer tree;
 	Mat source = Mat(coor_ref).reshape(1);
 	source.convertTo(source, CV_32F);
 	flann::KDTreeIndexParams indexParam(2);
@@ -220,7 +221,9 @@ void registration(path refpath,path tarpath,Run_config config,Run_result& result
 
 		result.data[i] = guess;
 	}
-
+	
+	if (AY_VERBOSE)
+		cout << tree.elapsed() << "s for others" << endl;
 }
 
 void common_exp(string dir,string ref_file,string outputdir)
@@ -343,6 +346,7 @@ void sift_time(path workdir)
 				{
 					string fileps= pos.path().string();
 					vector<KeyPoint> kps;
+					kps.resize(170000);
 					Mat desc;
 					Mat image = imread(fileps.c_str(), 1);
 					SIFT sift;
