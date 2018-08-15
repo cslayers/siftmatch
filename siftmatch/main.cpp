@@ -15,8 +15,9 @@ int main()
 	
 	//test_registration();
 
-	test_common_exp();
+	//test_common_exp();
 
+	test_sift_time();
 	
 
 	aywait();

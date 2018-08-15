@@ -312,3 +312,79 @@ void common_exp(string dir,string ref_file,string outputdir)
 		print_linetive;
 	}
 }
+
+
+void sift_time(path workdir)
+{
+	set<string> ext_list = { ".tif",".tiff",".jpg",".png",".bmp" };
+
+
+	if (is_directory(workdir))
+	{
+		workdir = system_complete(workdir);
+
+
+		vector<path> tarfilenames;
+
+
+		//statistic
+		double totaltime = 0;
+		int totalfeatures=0;
+		double totaldensity = 0;
+		int num_files = 0;
+
+
+
+		for (auto&&pos : recursive_directory_iterator(workdir))
+		{
+			if (is_regular_file(pos))
+			{
+				if(ext_list.count(pos.path().extension().string()))
+				{
+					string fileps= pos.path().string();
+					vector<KeyPoint> kps;
+					Mat desc;
+					Mat image = imread(fileps.c_str(), 1);
+					SIFT sift;
+					
+					
+
+
+					timer t;
+					sift.detect(image, kps);
+					sift.compute(image, kps, desc);
+
+					unsigned int pixels = image.size().width*image.size().height;
+					double featuredensity = double(kps.size()) / double(pixels) * 100;
+
+
+
+					//view
+					infoinline(t.elapsed());
+					infoinline(kps.size());
+					infoinline(featuredensity);
+					infoinline(image.size());
+					infoinline(pixels);
+					infoinline(pos.path().filename().string());
+					info(pos.path().parent_path().filename().string());
+
+					//statistic
+					totaltime += t.elapsed();
+					totalfeatures += kps.size();
+					totaldensity += featuredensity;
+					num_files++;
+				}
+			}
+		}
+
+		assert(num_files != 0);
+		
+		totaltime /= num_files;
+		totalfeatures /= num_files;
+		totaldensity /= num_files;
+
+		good("time " << totaltime);
+		good("features " << totalfeatures);
+		good("density "<<totaldensity);
+	}
+}

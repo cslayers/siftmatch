@@ -129,3 +129,20 @@ void test_common_exp()
 
 
 }
+
+
+
+void test_sift_time()
+{
+	string dir = "testdata";
+
+	for (auto&&pos : directory_iterator(dir))
+	{
+		if (is_directory(pos))
+		{
+			good(pos.path().filename().string());
+			sift_time(pos.path().string());
+		}
+		cout << endl;
+	}
+}

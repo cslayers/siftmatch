@@ -1,6 +1,8 @@
 #pragma once
 #include"aysift.h"
 #include<boost\filesystem.hpp>
+#include<boost\timer.hpp>
+#include<boost\progress.hpp>
 using namespace boost;
 using namespace boost::filesystem;
 
@@ -12,7 +14,7 @@ using namespace std;
 
 #define print_negative cout<<"[-]"
 #define print_positive cout<<"[+]"
-#define print_infotive cout<<"[#]"
+#define print_infotive cout<<"[o]"
 #define print_qmarkive cout<<"[?]"
 #define print_linetive cout<<endl
 
@@ -35,3 +37,5 @@ void print_guess(Sift_Guess guess);
 void write_result(Run_result result,string outpath);
 
 void print_run_result(Run_result result);
+
+void sift_time(path workdir);
